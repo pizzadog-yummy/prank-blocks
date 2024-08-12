@@ -6,6 +6,7 @@ class prankblocks {
       color1: '#000000',
       color2: '#000000',
       color3: '#000000',
+      docsURI: 'https://github.com/pizzadog-yummy/prank-blocks/tree/main?tab=readme-ov-file#prank-blocks',
       blockIconURI:
       'https://em-content.zobj.net/source/google/313/rolling-on-the-floor-laughing_1f923.png',
       blocks: [
@@ -54,6 +55,11 @@ class prankblocks {
           opcode: 'flashbang',
           blockType: Scratch.BlockType.COMMAND,
           text: 'MY EYES'
+        },
+        {
+          opcode: 'unsave',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Unsave page'
         },
         {
           opcode: 'poop',
@@ -152,7 +158,12 @@ class prankblocks {
     setTimeout(() => {
         document.body.removeChild(flashDiv);
     }, 850); 
-}
+  };
+  unsave(args) {
+    window.onbeforeunload = function() {
+      return "Changes not saved";
+    };
+  };
 
 }
 Scratch.extensions.register(new prankblocks());
