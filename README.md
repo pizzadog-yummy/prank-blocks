@@ -16,4 +16,5 @@ turn sandbox off to use
 | jumpscare | fnaf jumpscare |
 | comic sans | makes the page comic sans |
 | flashbang | MY EYES |
+| unsave | displays the changes aren't saved message on page close |
 | poop | poop color |
